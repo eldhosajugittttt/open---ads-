@@ -57,8 +57,10 @@
       "height": 1920,
       "status": "official-ratio-working-size",
       "safe_inset_percent": 10,
+      "critical_content_zone": {"x": 64, "y": 128, "width": 952, "height": 1200},
+      "default_embedded_overlays": {"logo": false, "product_title": false, "price_offer": false, "cta": false},
       "copy_lines_max": 3,
-      "notes": ["Stories are full-screen vertical placements.", "Keep text, logos, and key elements away from interface overlays and the bottom CTA area."]
+      "notes": ["Stories are full-screen vertical placements.", "Keep the hero visual, callouts, and essential text inside the critical-content zone.", "Background and decoration may extend outside the critical-content zone.", "Open Ads defaults to no embedded logo, price, offer, or CTA for 9:16 placements unless the brief explicitly requires one."]
     },
     "meta-reels": {
       "platform": "meta",
@@ -69,8 +71,10 @@
       "height": 1920,
       "status": "official-ratio-working-size",
       "safe_inset_percent": 10,
+      "critical_content_zone": {"x": 64, "y": 128, "width": 952, "height": 1200},
+      "default_embedded_overlays": {"logo": false, "product_title": false, "price_offer": false, "cta": false},
       "copy_lines_max": 3,
-      "notes": ["Meta recommends vertical 9:16 creative with key messages inside the Reels safe zone.", "Use audio for video when rights permit."]
+      "notes": ["Keep the hero visual, callouts, and essential messages inside the critical-content zone.", "Background and decoration may extend outside the critical-content zone.", "Open Ads defaults to no embedded logo, price, offer, or CTA for 9:16 placements unless the brief explicitly requires one.", "Use audio for video when rights permit."]
     },
     "google-pmax-landscape": {
       "platform": "google",
