@@ -1,0 +1,4 @@
+interface:
+  display_name: "Reconstruct Flat Ad"
+  short_description: "Rebuild a flattened ad as editable semantic layers"
+  default_prompt: "Use $reconstruct-flat-ad to analyze this flattened ad and produce an editable Open Ads IR with uncertainties."

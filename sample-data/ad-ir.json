@@ -1,0 +1,68 @@
+{
+  "version": "1.0",
+  "frame": {
+    "name": "SUMMER-SAREE-001 / Master",
+    "width": 1080,
+    "height": 1350,
+    "background": "color.background"
+  },
+  "tokens": {
+    "colors": {
+      "color.background": "#F4E9D8",
+      "color.text": "#432817",
+      "color.accent": "#A77132"
+    },
+    "fonts": {
+      "font.display": "Cormorant Garamond",
+      "font.body": "Inter"
+    },
+    "spacing": {
+      "space.safe": 72
+    }
+  },
+  "layers": [
+    {
+      "id": "background",
+      "role": "BACKGROUND",
+      "kind": "rectangle",
+      "box": { "x": 0, "y": 0, "width": 1080, "height": 1350 },
+      "fill": "color.background",
+      "confidence": 1,
+      "editable": true,
+      "notes": []
+    },
+    {
+      "id": "product",
+      "role": "PRODUCT_IMAGE",
+      "kind": "image",
+      "box": { "x": 450, "y": 120, "width": 560, "height": 1140 },
+      "asset": "assets/products/saree-001.png",
+      "confidence": 1,
+      "editable": true,
+      "notes": ["Protect garment color, border, embroidery, and drape."]
+    },
+    {
+      "id": "headline",
+      "role": "HEADLINE",
+      "kind": "text",
+      "box": { "x": 72, "y": 310, "width": 390, "height": 210 },
+      "text": "Drape the celebration",
+      "font": {
+        "family": "Cormorant Garamond",
+        "style": "Semibold",
+        "size": 82,
+        "line_height": 88,
+        "letter_spacing": 0,
+        "match_type": "available-substitute"
+      },
+      "fill": "color.text",
+      "confidence": 0.88,
+      "editable": true,
+      "notes": ["Exact reference font unavailable; designer review required."]
+    }
+  ],
+  "review": {
+    "required": true,
+    "issues": ["Confirm the display-font substitute against the brand library."]
+  }
+}

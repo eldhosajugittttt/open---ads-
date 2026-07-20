@@ -1,0 +1,4 @@
+interface:
+  display_name: "Plan Ad Campaign"
+  short_description: "Structure an approved multi-platform ad campaign"
+  default_prompt: "Use $plan-ad-campaign to turn this brief into a validated Open Ads campaign record."

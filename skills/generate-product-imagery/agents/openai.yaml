@@ -1,0 +1,4 @@
+interface:
+  display_name: "Generate Product Imagery"
+  short_description: "Generate textless imagery while protecting product truth"
+  default_prompt: "Use $generate-product-imagery to plan product-accurate textless campaign imagery for these placements."

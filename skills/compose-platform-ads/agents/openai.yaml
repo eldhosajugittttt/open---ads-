@@ -1,0 +1,4 @@
+interface:
+  display_name: "Compose Platform Ads"
+  short_description: "Compose editable Meta, Instagram, and PMax ads"
+  default_prompt: "Use $compose-platform-ads to create a platform-safe editable composition for this campaign."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Audit Ad Creative"
+  short_description: "Audit ad truth, layout, safety, and platform compliance"
+  default_prompt: "Use $audit-ad-creative to audit this campaign and return blocker, review, and suggestion findings."

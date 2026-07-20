@@ -1,0 +1,4 @@
+interface:
+  display_name: "Multiply Ad Variants"
+  short_description: "Recompose one approved master for every target"
+  default_prompt: "Use $multiply-ad-variants to turn this approved master into reviewed placement-specific variants."

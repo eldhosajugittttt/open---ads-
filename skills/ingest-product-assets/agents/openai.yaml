@@ -1,0 +1,4 @@
+interface:
+  display_name: "Ingest Product Assets"
+  short_description: "Fetch verified Shopify product assets for ads"
+  default_prompt: "Use $ingest-product-assets to fetch and normalize the approved product assets for this campaign."

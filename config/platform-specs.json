@@ -1,0 +1,175 @@
+{
+  "schema_version": "1.0.0",
+  "verified_at": "2026-07-20",
+  "sources": [
+    {
+      "platform": "meta",
+      "title": "Meta tailored campaign creative best practices",
+      "url": "https://www.facebook.com/business/ads/automation/tailored-campaigns"
+    },
+    {
+      "platform": "meta",
+      "title": "Meta Reels ads",
+      "url": "https://www.facebook.com/business/ads/facebook-instagram-reels-ads"
+    },
+    {
+      "platform": "google",
+      "title": "About image assets for Performance Max campaigns",
+      "url": "https://support.google.com/google-ads/answer/14530211?hl=en"
+    },
+    {
+      "platform": "google",
+      "title": "How Performance Max asset groups work",
+      "url": "https://support.google.com/google-ads/answer/10724748?hl=en"
+    }
+  ],
+  "placements": {
+    "meta-feed-square": {
+      "platform": "meta",
+      "surface": "feed",
+      "asset_type": "image",
+      "ratio": "1:1",
+      "width": 1080,
+      "height": 1080,
+      "status": "working-recommendation",
+      "safe_inset_percent": 6,
+      "copy_lines_max": 3,
+      "notes": ["Meta supports square photos in Feed.", "Prefer 4:5 when one portrait Feed asset can be supplied."]
+    },
+    "meta-feed-portrait": {
+      "platform": "meta",
+      "surface": "feed",
+      "asset_type": "image",
+      "ratio": "4:5",
+      "width": 1080,
+      "height": 1350,
+      "status": "official-ratio-working-size",
+      "safe_inset_percent": 6,
+      "copy_lines_max": 3,
+      "notes": ["Meta recommends 4:5 for Feed.", "Keep the product as the primary focal point and on-image copy short."]
+    },
+    "meta-stories": {
+      "platform": "meta",
+      "surface": "stories",
+      "asset_type": "image-or-video",
+      "ratio": "9:16",
+      "width": 1080,
+      "height": 1920,
+      "status": "official-ratio-working-size",
+      "safe_inset_percent": 10,
+      "copy_lines_max": 3,
+      "notes": ["Stories are full-screen vertical placements.", "Keep text, logos, and key elements away from interface overlays and the bottom CTA area."]
+    },
+    "meta-reels": {
+      "platform": "meta",
+      "surface": "reels",
+      "asset_type": "video-preferred",
+      "ratio": "9:16",
+      "width": 1080,
+      "height": 1920,
+      "status": "official-ratio-working-size",
+      "safe_inset_percent": 10,
+      "copy_lines_max": 3,
+      "notes": ["Meta recommends vertical 9:16 creative with key messages inside the Reels safe zone.", "Use audio for video when rights permit."]
+    },
+    "google-pmax-landscape": {
+      "platform": "google",
+      "surface": "performance-max",
+      "asset_type": "image",
+      "ratio": "1.91:1",
+      "width": 1200,
+      "height": 628,
+      "minimum_width": 600,
+      "minimum_height": 314,
+      "max_file_mb": 5,
+      "required": true,
+      "recommended_count": 4,
+      "maximum_count": 20,
+      "safe_inset_percent": 10,
+      "notes": ["Keep critical content within the center 80%.", "Supply at least one image without text or graphic overlays for this ratio."]
+    },
+    "google-pmax-square": {
+      "platform": "google",
+      "surface": "performance-max",
+      "asset_type": "image",
+      "ratio": "1:1",
+      "width": 1200,
+      "height": 1200,
+      "minimum_width": 300,
+      "minimum_height": 300,
+      "max_file_mb": 5,
+      "required": true,
+      "recommended_count": 4,
+      "maximum_count": 20,
+      "safe_inset_percent": 10,
+      "notes": ["Keep critical content within the center 80%.", "Supply at least one image without text or graphic overlays for this ratio."]
+    },
+    "google-pmax-portrait": {
+      "platform": "google",
+      "surface": "performance-max",
+      "asset_type": "image",
+      "ratio": "4:5",
+      "width": 960,
+      "height": 1200,
+      "minimum_width": 480,
+      "minimum_height": 600,
+      "max_file_mb": 5,
+      "required": false,
+      "recommended_count": 2,
+      "maximum_count": 20,
+      "safe_inset_percent": 10,
+      "notes": ["Keep critical content within the center 80%.", "Supply at least one image without text or graphic overlays for this ratio."]
+    },
+    "google-pmax-logo-square": {
+      "platform": "google",
+      "surface": "performance-max",
+      "asset_type": "logo",
+      "ratio": "1:1",
+      "width": 1200,
+      "height": 1200,
+      "minimum_width": 128,
+      "minimum_height": 128,
+      "max_file_mb": 5,
+      "required": true,
+      "recommended_count": 1,
+      "maximum_count": 5,
+      "safe_inset_percent": 10,
+      "notes": ["Avoid a predominantly white logo on transparency because it may render on white."]
+    },
+    "google-pmax-logo-landscape": {
+      "platform": "google",
+      "surface": "performance-max",
+      "asset_type": "logo",
+      "ratio": "4:1",
+      "width": 1200,
+      "height": 300,
+      "minimum_width": 512,
+      "minimum_height": 128,
+      "max_file_mb": 5,
+      "required": false,
+      "recommended_count": 1,
+      "maximum_count": 5,
+      "safe_inset_percent": 10,
+      "notes": ["Use a clear, high-quality official logo."]
+    }
+  },
+  "copy_limits": {
+    "google-pmax": {
+      "headline_max_chars": 30,
+      "headlines_min": 3,
+      "headlines_recommended": 11,
+      "headlines_max": 15,
+      "short_headline_required_max_chars": 15,
+      "long_headline_max_chars": 90,
+      "long_headlines_min": 1,
+      "long_headlines_recommended": 2,
+      "long_headlines_max": 5,
+      "description_max_chars": 90,
+      "descriptions_min": 2,
+      "descriptions_recommended": 4,
+      "descriptions_max": 5,
+      "business_name_max_chars": 25,
+      "display_path_max_chars": 15
+    }
+  }
+}

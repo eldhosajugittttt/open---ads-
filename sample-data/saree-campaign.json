@@ -1,0 +1,50 @@
+{
+  "campaign_id": "SUMMER-SAREE-001",
+  "client": "Sample Silks",
+  "locale": "en-IN",
+  "concept": {
+    "name": "Quiet Gold",
+    "headline": "Drape the celebration",
+    "subheadline": "Handpicked festive sarees",
+    "cta": "Shop now",
+    "offer": "Up to 20% off",
+    "price": "",
+    "legal_copy": "Terms apply.",
+    "destination_url": "https://example.com/collections/sarees",
+    "product_asset": "assets/products/saree-001.png",
+    "logo_asset": "assets/brand/logo.svg",
+    "generated_product_scene": false
+  },
+  "pmax_copy": {
+    "headlines": [
+      "Festive sarees",
+      "Drape the celebration",
+      "Shop timeless sarees"
+    ],
+    "long_headlines": [
+      "Discover festive sarees selected for every celebration"
+    ],
+    "descriptions": [
+      "Explore festive sarees selected for memorable celebrations.",
+      "Find rich colours and elegant drapes for the season."
+    ],
+    "business_name": "Sample Silks"
+  },
+  "approvals": {
+    "concept": "approved",
+    "product_truth": "approved",
+    "offer": "approved",
+    "legal": "approved",
+    "publishing": "pending"
+  },
+  "targets": [
+    "meta-feed-square",
+    "meta-feed-portrait",
+    "meta-stories",
+    "meta-reels",
+    "google-pmax-landscape",
+    "google-pmax-square",
+    "google-pmax-portrait",
+    "google-pmax-logo-square"
+  ]
+}
