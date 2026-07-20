@@ -2,6 +2,8 @@
 
 Open Ads is a small, skill-first foundation for turning one approved ad concept into editable, platform-ready creative variants. It is designed for Codex, Figma, image generation, and human art direction.
 
+Developed for Greenhonchos Solutions.
+
 The repository deliberately reuses only the useful foundation from [Open Design](https://github.com/nexu-io/open-design): a structured design intermediate representation (IR), a staged migration workflow, token thinking, product-image discipline, and visual QA. It does not copy the desktop application or its broad collection of unrelated skills.
 
 ## What works now
