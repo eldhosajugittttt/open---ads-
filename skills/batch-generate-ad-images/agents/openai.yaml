@@ -1,0 +1,4 @@
+interface:
+  display_name: "Batch Generate Ad Images"
+  short_description: "Create distinct ad image concepts in one batch"
+  default_prompt: "Use $batch-generate-ad-images to create a reviewed batch of distinct campaign image concepts from this brief."

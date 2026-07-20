@@ -18,7 +18,7 @@ Use `platform-specs.json` and the variant plan to recompose semantic roles for e
 
 ## 5. Product ingestion and imagery
 
-Add authenticated Shopify Storefront API ingestion, local caching, asset provenance, and image generation. Keep exact product images protected and require review before a generated scene becomes approved.
+Add authenticated Shopify Storefront API ingestion, local caching, asset provenance, and image generation. Use `$batch-generate-ad-images` to expand one approved brief into distinct concept prompts, generate independent assets in controlled parallel waves, and preserve a manifest for review. Keep exact product images protected and require review before a generated scene becomes approved.
 
 ## 6. Visual QA
 
