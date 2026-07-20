@@ -1,0 +1,80 @@
+{
+  "schema_version": "1.0.0",
+  "kind": "open-ads-house-canvas-defaults",
+  "notes": [
+    "Use these dimensions as the default Figma canvas sizes for design and ratio-based resizing.",
+    "Explicit campaign dimensions override these presets.",
+    "Named placement requirements in platform-specs.json override these house defaults when a platform requires a different size."
+  ],
+  "presets": {
+    "vertical-9x16": {
+      "ratio": "9:16",
+      "width": 1080,
+      "height": 1920,
+      "common_uses": ["Reels", "Stories", "Shorts"]
+    },
+    "portrait-feed-4x5": {
+      "ratio": "4:5",
+      "width": 1080,
+      "height": 1350,
+      "common_uses": ["Instagram Feed Portrait"]
+    },
+    "square-1x1": {
+      "ratio": "1:1",
+      "width": 1080,
+      "height": 1080,
+      "common_uses": ["Instagram Square"]
+    },
+    "landscape-link-1_91x1": {
+      "ratio": "1.91:1",
+      "width": 1200,
+      "height": 628,
+      "alternate_dimensions": [
+        {"width": 1080, "height": 566}
+      ],
+      "common_uses": ["Facebook Link Preview", "LinkedIn Link Preview"]
+    },
+    "landscape-video-16x9": {
+      "ratio": "16:9",
+      "width": 1920,
+      "height": 1080,
+      "common_uses": ["YouTube", "Landscape Video"]
+    },
+    "portrait-photo-3x4": {
+      "ratio": "3:4",
+      "width": 1080,
+      "height": 1440,
+      "common_uses": ["Portrait Photos"]
+    },
+    "portrait-print-2x3": {
+      "ratio": "2:3",
+      "width": 1080,
+      "height": 1620,
+      "common_uses": ["Photography Prints"]
+    },
+    "landscape-photo-3x2": {
+      "ratio": "3:2",
+      "width": 1620,
+      "height": 1080,
+      "common_uses": ["DSLR Landscape"]
+    },
+    "landscape-feed-5x4": {
+      "ratio": "5:4",
+      "width": 1350,
+      "height": 1080,
+      "common_uses": ["Landscape Feed"]
+    },
+    "ultrawide-21x9": {
+      "ratio": "21:9",
+      "width": 2520,
+      "height": 1080,
+      "common_uses": ["Ultrawide Banners"]
+    },
+    "wide-banner-2x1": {
+      "ratio": "2:1",
+      "width": 2160,
+      "height": 1080,
+      "common_uses": ["Wide Banners"]
+    }
+  }
+}

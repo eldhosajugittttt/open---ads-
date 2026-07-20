@@ -8,6 +8,30 @@ const testDir = path.dirname(fileURLToPath(import.meta.url));
 const root = path.resolve(testDir, "..");
 const sample = readJson(path.join(root, "sample-data/saree-campaign.json"));
 const specs = loadSpecs(path.join(root, "config/platform-specs.json"));
+const canvasPresets = readJson(path.join(root, "config/canvas-presets.json"));
+
+test("house canvas presets retain approved Figma dimensions", () => {
+  const actual = Object.fromEntries(
+    Object.values(canvasPresets.presets).map((preset) => [preset.ratio, [preset.width, preset.height]])
+  );
+  assert.deepEqual(actual, {
+    "9:16": [1080, 1920],
+    "4:5": [1080, 1350],
+    "1:1": [1080, 1080],
+    "1.91:1": [1200, 628],
+    "16:9": [1920, 1080],
+    "3:4": [1080, 1440],
+    "2:3": [1080, 1620],
+    "3:2": [1620, 1080],
+    "5:4": [1350, 1080],
+    "21:9": [2520, 1080],
+    "2:1": [2160, 1080]
+  });
+  assert.deepEqual(
+    canvasPresets.presets["landscape-link-1_91x1"].alternate_dimensions,
+    [{width: 1080, height: 566}]
+  );
+});
 
 test("sample campaign validates", () => {
   const result = validateCampaign(sample, specs);

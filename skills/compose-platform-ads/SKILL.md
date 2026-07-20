@@ -9,9 +9,9 @@ Build one clear master concept, then respect how each platform consumes creative
 
 ## Workflow
 
-1. Read `references/platform-rules.md`.
+1. Read `references/platform-rules.md` and load `config/canvas-presets.json` when using the Open Ads repository.
 2. Validate campaign approvals and target placement IDs.
-3. Choose the hardest target ratio as the composition stress test and decide whether each ratio needs a crop, re-layout, or image outpaint.
+3. Resolve each canvas using this priority: explicit campaign dimensions, named platform requirements, then the house canvas preset. Choose the hardest target ratio as the composition stress test and decide whether each ratio needs a crop, re-layout, or image outpaint.
 4. Place the product or service benefit as the primary focal point.
 5. Keep logos, copy, prices, CTA, and legal content as editable layers.
 6. Use a textless or overlay-free visual master where PMax requires flexible assembly.

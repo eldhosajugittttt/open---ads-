@@ -2,6 +2,24 @@
 
 Do not scale the entire master proportionally.
 
+## House canvas presets
+
+| Ratio | Default pixels |
+| --- | --- |
+| 9:16 | 1080 × 1920 |
+| 4:5 | 1080 × 1350 |
+| 1:1 | 1080 × 1080 |
+| 1.91:1 | 1200 × 628; alternate 1080 × 566 |
+| 16:9 | 1920 × 1080 |
+| 3:4 | 1080 × 1440 |
+| 2:3 | 1080 × 1620 |
+| 3:2 | 1620 × 1080 |
+| 5:4 | 1350 × 1080 |
+| 21:9 | 2520 × 1080 |
+| 2:1 | 2160 × 1080 |
+
+Use explicit approved dimensions when supplied. Otherwise, named platform dimensions override these general presets; use the table as the default for ratio-only Figma resizing.
+
 - Square: balance product and copy; use a centered or diagonal relationship.
 - Feed portrait: use vertical hierarchy; give the product more area than copy.
 - Story/Reel: keep the hero visual, callouts, and essential text inside the registered 9:16 critical-content zone. Default to no embedded logo, price, offer, or CTA.

@@ -9,11 +9,11 @@ Preserve the creative idea while changing the composition for each target.
 
 ## Workflow
 
-1. Read `references/responsive-layout.md`.
+1. Read `references/responsive-layout.md` and load `config/canvas-presets.json` when using the Open Ads repository.
 2. Run `node scripts/plan-variants.mjs <campaign.json>` when using the Open Ads repository.
 3. Lock approved product, logo, offer, price, legal, and destination data.
 4. Copy semantic roles rather than raw coordinates from the master.
-5. Recompose each target using its safe zone and surface behavior.
+5. Resolve dimensions using explicit campaign size first, named platform placement second, and the house canvas preset third. Recompose each target using its safe zone and surface behavior.
 6. Shorten copy only from approved alternatives. Never rewrite legal text.
 7. Preserve subject focal points; extend the image or switch to `FIT` when a crop would damage product truth.
 8. Name frames and exports deterministically.

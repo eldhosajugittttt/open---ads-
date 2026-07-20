@@ -10,6 +10,7 @@ The repository deliberately reuses only the useful foundation from [Open Design]
 
 - Eight reusable Codex skills cover planning, Shopify/product ingestion, flattened-ad reconstruction, platform composition, product imagery, universal batch image generation, variant multiplication, and QA.
 - A machine-readable placement registry covers Meta/Instagram Feed, Stories and Reels plus Google Performance Max image and logo assets.
+- A machine-readable canvas preset registry supplies the approved default Figma dimensions for eleven common ratios.
 - `plan-variants.mjs` converts a campaign brief into a deterministic list of platform canvases and layout rules.
 - `validate-campaign.mjs` catches missing approvals, invalid copy lengths, duplicate export names, unsafe product-generation states, and unsupported placements.
 - JSON Schemas define the campaign contract and the editable Figma ad IR.
@@ -45,7 +46,7 @@ node scripts/plan-variants.mjs sample-data/saree-campaign.json > variant-plan.js
 ## Repository map
 
 ```text
-config/                 Versioned placement rules
+config/                 Versioned placement rules and Figma canvas presets
 docs/                   Architecture, provenance, and roadmap
 packages/figma-ir/      Contract for the future Figma importer
 sample-data/            Valid examples
