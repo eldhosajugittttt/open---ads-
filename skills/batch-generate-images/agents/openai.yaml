@@ -1,0 +1,4 @@
+interface:
+  display_name: "Batch Generate Images"
+  short_description: "Create multiple distinct raster assets from one brief"
+  default_prompt: "Use $batch-generate-images to create and review a coherent batch of image assets from this brief."

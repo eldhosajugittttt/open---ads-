@@ -8,7 +8,7 @@ The repository deliberately reuses only the useful foundation from [Open Design]
 
 ## What works now
 
-- Eight reusable Codex skills cover planning, Shopify/product ingestion, flattened-ad reconstruction, platform composition, product imagery, batch image concepts, variant multiplication, and QA.
+- Eight reusable Codex skills cover planning, Shopify/product ingestion, flattened-ad reconstruction, platform composition, product imagery, universal batch image generation, variant multiplication, and QA.
 - A machine-readable placement registry covers Meta/Instagram Feed, Stories and Reels plus Google Performance Max image and logo assets.
 - `plan-variants.mjs` converts a campaign brief into a deterministic list of platform canvases and layout rules.
 - `validate-campaign.mjs` catches missing approvals, invalid copy lengths, duplicate export names, unsafe product-generation states, and unsupported placements.
@@ -37,7 +37,7 @@ node scripts/plan-variants.mjs sample-data/saree-campaign.json > variant-plan.js
 2. Run `$ingest-product-assets` for Shopify or other product sources.
 3. If the source is a flattened reference, run `$reconstruct-flat-ad` to produce an editable ad IR and an uncertainty report.
 4. Run `$generate-product-imagery` where one new textless master image is needed.
-5. Run `$batch-generate-ad-images` when the brief needs several distinct image concepts at once.
+5. Run `$batch-generate-images` whenever one brief needs several raster assets, concepts, variations, or connected images at once.
 6. Run `$compose-platform-ads` to create the master composition.
 7. Run `$multiply-ad-variants` to recompose it for the target placements.
 8. Run `$audit-ad-creative` before export or delivery.
