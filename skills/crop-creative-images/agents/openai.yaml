@@ -1,0 +1,4 @@
+interface:
+  display_name: "Crop Creative Images"
+  short_description: "Protect focal subjects across ad crops"
+  default_prompt: "Use $crop-creative-images to create safe, intentional crops for these target ratios."

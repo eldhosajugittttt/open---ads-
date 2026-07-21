@@ -1,0 +1,31 @@
+{
+  "schema_version": "1.0.0",
+  "kind": "open-ads-skill-router",
+  "policy": {
+    "default_primary_skills": 1,
+    "default_max_worker_skills": 2,
+    "compound_phase_max_worker_skills": 3,
+    "load_skill_bodies_only_after_selection": true,
+    "load_references_only_when_required_by_selected_skill": true,
+    "reroute_at_phase_boundaries": true
+  },
+  "skills": [
+    {"name": "plan-ad-campaign", "phase": "plan", "signals": ["brief", "campaign plan", "objective", "audience", "approvals"]},
+    {"name": "ingest-product-assets", "phase": "source", "signals": ["Shopify", "product URL", "variant", "product images", "official logo"]},
+    {"name": "reconstruct-flat-ad", "phase": "source", "signals": ["flattened ad", "rebuild", "OCR", "font match", "asset separation", "text removal"]},
+    {"name": "direct-brand-typography", "phase": "direction", "signals": ["branding", "typography", "font pairing", "serif", "sans-serif", "on-brand"]},
+    {"name": "generate-product-imagery", "phase": "imagery", "signals": ["one product image", "lifestyle master", "background replacement", "product reference"]},
+    {"name": "batch-generate-images", "phase": "imagery", "signals": ["batch", "multiple images", "variations", "asset set", "sequence"]},
+    {"name": "crop-creative-images", "phase": "adapt", "signals": ["crop", "cut off", "focal point", "image fill", "fit image"]},
+    {"name": "expand-banner-images", "phase": "adapt", "signals": ["expand sides", "outpaint", "wide banner", "21:9", "2:1", "crop cannot fit"]},
+    {"name": "compose-platform-ads", "phase": "compose", "signals": ["Figma ad", "Meta", "PMax", "master layout", "platform composition"]},
+    {"name": "multiply-ad-variants", "phase": "adapt", "signals": ["resize", "multiple sizes", "variants", "recompose", "export plan"]},
+    {"name": "audit-ad-creative", "phase": "review", "signals": ["audit", "QA", "check layout", "pre-export", "handoff"]}
+  ],
+  "conditional_dependencies": [
+    {"from": "crop-creative-images", "to": "expand-banner-images", "only_if": "no safe crop, fit, or recompose preserves protected content"},
+    {"from": "multiply-ad-variants", "to": "crop-creative-images", "only_if": "an image-fill crop is required"},
+    {"from": "multiply-ad-variants", "to": "expand-banner-images", "only_if": "a wide target cannot preserve the approved subject through crop or recompose"},
+    {"from": "generate-product-imagery", "to": "batch-generate-images", "only_if": "more than one distinct raster output is requested"}
+  ]
+}

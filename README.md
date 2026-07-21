@@ -8,7 +8,8 @@ The repository deliberately reuses only the useful foundation from [Open Design]
 
 ## What works now
 
-- Eight reusable Codex skills cover planning, Shopify/product ingestion, flattened-ad reconstruction, platform composition, product imagery, universal batch image generation, variant multiplication, and QA.
+- Twelve reusable Codex skills cover routing, planning, Shopify/product ingestion, flattened-ad reconstruction, brand typography, product imagery, universal batch image generation, crop control, banner expansion, platform composition, variant multiplication, and QA.
+- A lightweight machine-readable router selects the minimum skills for the current phase instead of loading the full library.
 - A machine-readable placement registry covers Meta/Instagram Feed, Stories and Reels plus Google Performance Max image and logo assets.
 - A machine-readable canvas preset registry supplies the approved default Figma dimensions for eleven common ratios.
 - `plan-variants.mjs` converts a campaign brief into a deterministic list of platform canvases and layout rules.
@@ -34,25 +35,27 @@ node scripts/plan-variants.mjs sample-data/saree-campaign.json > variant-plan.js
 
 ## Workflow
 
-1. Run `$plan-ad-campaign` to turn the brief into approved structured data.
-2. Run `$ingest-product-assets` for Shopify or other product sources.
-3. If the source is a flattened reference, run `$reconstruct-flat-ad` to produce an editable ad IR and an uncertainty report.
-4. Run `$generate-product-imagery` where one new textless master image is needed.
-5. Run `$batch-generate-images` whenever one brief needs several raster assets, concepts, variations, or connected images at once.
-6. Run `$compose-platform-ads` to create the master composition.
-7. Run `$multiply-ad-variants` to recompose it for the target placements.
-8. Run `$audit-ad-creative` before export or delivery.
+1. Run `$route-open-ads-skills` when the required workflow is unclear; it selects the minimum skills for the current phase.
+2. Run `$plan-ad-campaign` to turn the brief into approved structured data.
+3. Run `$ingest-product-assets` for Shopify or other product sources.
+4. If the source is a flattened reference, run `$reconstruct-flat-ad` to produce an editable ad IR and an uncertainty report.
+5. Run `$direct-brand-typography` only when brand or type direction is not already approved.
+6. Run `$generate-product-imagery` for one textless master, or `$batch-generate-images` for several distinct raster assets.
+7. Run `$compose-platform-ads` to create the master composition.
+8. Run `$crop-creative-images` only when a ratio needs an art-directed image crop; escalate to `$expand-banner-images` only when crop or recompose cannot work.
+9. Run `$multiply-ad-variants` to recompose the approved master for target placements.
+10. Run `$audit-ad-creative` before export or delivery.
 
 ## Repository map
 
 ```text
-config/                 Versioned placement rules and Figma canvas presets
+config/                 Placement, Figma canvas, and skill-routing rules
 docs/                   Architecture, provenance, and roadmap
 packages/figma-ir/      Contract for the future Figma importer
 sample-data/            Valid examples
 schemas/                Campaign and ad-IR JSON Schemas
 scripts/                Dependency-free planner and validator
-skills/                 Eight installable Codex skills
+skills/                 Twelve installable Codex skills
 tests/                  Automated checks
 ```
 

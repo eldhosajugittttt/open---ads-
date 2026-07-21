@@ -1,4 +1,5 @@
 import assert from "node:assert/strict";
+import fs from "node:fs";
 import path from "node:path";
 import test from "node:test";
 import { fileURLToPath } from "node:url";
@@ -9,6 +10,31 @@ const root = path.resolve(testDir, "..");
 const sample = readJson(path.join(root, "sample-data/saree-campaign.json"));
 const specs = loadSpecs(path.join(root, "config/platform-specs.json"));
 const canvasPresets = readJson(path.join(root, "config/canvas-presets.json"));
+const skillRouter = readJson(path.join(root, "config/skill-router.json"));
+
+test("skill router maps every worker skill without encouraging over-reading", () => {
+  const routedNames = skillRouter.skills.map((item) => item.name);
+  const expectedNames = [
+    "audit-ad-creative",
+    "batch-generate-images",
+    "compose-platform-ads",
+    "crop-creative-images",
+    "direct-brand-typography",
+    "expand-banner-images",
+    "generate-product-imagery",
+    "ingest-product-assets",
+    "multiply-ad-variants",
+    "plan-ad-campaign",
+    "reconstruct-flat-ad"
+  ];
+  assert.deepEqual([...routedNames].sort(), expectedNames);
+  assert.equal(new Set(routedNames).size, routedNames.length);
+  assert.ok(routedNames.every((name) => fs.existsSync(path.join(root, "skills", name, "SKILL.md"))));
+  assert.equal(skillRouter.policy.default_primary_skills, 1);
+  assert.ok(skillRouter.policy.default_max_worker_skills <= 2);
+  assert.ok(skillRouter.policy.compound_phase_max_worker_skills <= 3);
+  assert.equal(skillRouter.policy.load_skill_bodies_only_after_selection, true);
+});
 
 test("house canvas presets retain approved Figma dimensions", () => {
   const actual = Object.fromEntries(

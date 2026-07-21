@@ -30,12 +30,15 @@ For each target:
 
 1. Create the exact canvas.
 2. Draw the safe zone.
-3. Position the focal product first.
-4. Place logo and editable copy by priority.
-5. Wrap text before shrinking it.
-6. Check edge risk, overlap, contrast, and legibility at 100%.
-7. Compare against the master for brand continuity, not identical coordinates.
-8. Reject all overlaps, tangencies, clipped text, and content-to-decoration collisions after the last edit.
+3. Divide it into intentional image, copy, branding, CTA, and legal zones before placing content.
+4. Position the focal product first and set an explicit crop focal point.
+5. Place the approved logo at its correct aspect ratio, clear space, and minimum size.
+6. Place editable copy by hierarchy. Preserve type roles and relative emphasis, not identical font sizes.
+7. Wrap text before shrinking it; if hierarchy still fails, change the zone proportions or use an approved shorter line.
+8. Align related content to shared anchors and maintain a consistent spacing rhythm.
+9. Check edge risk, overlap, contrast, and legibility at 100%.
+10. Compare against the master for brand continuity, not identical coordinates.
+11. Reject all overlaps, tangencies, clipped text, inconsistent gutters, and content-to-decoration collisions after the last edit.
 
 For a 1080×1920 Meta Story/Reel, use `x=64`, `y=128`, `width=952`, `height=1200` as the critical-content zone. Background and nonessential decoration may extend outside. Keep the guide hidden for export.
 

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Route Open Ads Skills"
+  short_description: "Select only the skills needed for each task"
+  default_prompt: "Use $route-open-ads-skills to choose the minimum Open Ads skills required for this request."

@@ -13,10 +13,11 @@ Preserve the creative idea while changing the composition for each target.
 2. Run `node scripts/plan-variants.mjs <campaign.json>` when using the Open Ads repository.
 3. Lock approved product, logo, offer, price, legal, and destination data.
 4. Copy semantic roles rather than raw coordinates from the master.
-5. Resolve dimensions using explicit campaign size first, named platform placement second, and the house canvas preset third. Recompose each target using its safe zone and surface behavior.
+5. Resolve dimensions using explicit campaign size first, named platform placement second, and the house canvas preset third. Recompose each target using its safe zone, surface behavior, and the layout order in `references/responsive-layout.md`.
 6. Shorten copy only from approved alternatives. Never rewrite legal text.
-7. Preserve subject focal points; extend the image or switch to `FIT` when a crop would damage product truth.
+7. Load `$crop-creative-images` only when image-fill cropping is required. Load `$expand-banner-images` only when no safe crop, fit, or recompose can preserve product truth.
 8. Name frames and exports deterministically.
 9. Mark every generated variant for designer review.
+10. Run a final collision pass after all text wrapping, image changes, and logo placement; reject overlaps, clipped content, unsafe tangencies, and inconsistent margins.
 
 Produce a manifest connecting each frame to campaign, target, locale, concept, product asset, source master, and export filename.

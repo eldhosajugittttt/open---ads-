@@ -1,0 +1,4 @@
+interface:
+  display_name: "Direct Brand Typography"
+  short_description: "Build consistent brand and type direction"
+  default_prompt: "Use $direct-brand-typography to define the branding and typography system for this campaign."

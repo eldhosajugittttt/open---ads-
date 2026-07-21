@@ -1,0 +1,4 @@
+interface:
+  display_name: "Expand Banner Images"
+  short_description: "Extend campaign imagery for wide banners"
+  default_prompt: "Use $expand-banner-images to create a wide-safe banner image without changing the approved subject."
